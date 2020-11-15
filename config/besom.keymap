@@ -32,7 +32,6 @@
         osk: oneshotkey {
 			compatible = "zmk,behavior-key-press";
 			label = "KEY_PRESS";
-			usage_page = <USAGE_KEYPAD>;
 			#binding-cells = <1>;
 		};
         
