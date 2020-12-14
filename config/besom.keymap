@@ -58,6 +58,8 @@
         COMBO(RIGHT_BRACKET, 17 27)
         COMBO(SLASH, 18 28)
         COMBO(BACKSLASH, 19 29)
+
+        COMBO(ESC, 22 23)
     };
 
     keymap {
