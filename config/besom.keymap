@@ -3,10 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define NUM 1
-#define SYM 2
-#define NAV 3
-#define I3  4
+#define NAV 1
+#define I3  2
 
 &mt {
     flavor = "tap-preferred";
@@ -17,17 +15,17 @@
     flavor = "tap-preferred";
     tapping_term_ms = <150>;
 };
-#define xstr(s) str(s)
+
 #define str(s) #s
 #define COMBO_TIMEOUT 30
 #define COMBO(NAME, KEYPOS) \
-		combo_##NAME { \
-			compatible = "zmk,behavior-combo"; \
-			label = str(COMBO_##NAME); \
-			timeout-ms = <COMBO_TIMEOUT>; \
-			key-positions = <KEYPOS>; \
-			bindings = <&kp NAME>; \
-		};
+    combo_##NAME { \
+        compatible = "zmk,behavior-combo"; \
+        label = str(COMBO_##NAME); \
+        timeout-ms = <COMBO_TIMEOUT>; \
+        key-positions = <KEYPOS>; \
+        bindings = <&kp NAME>; \
+    };
 
 / {
     behaviors {
@@ -69,7 +67,8 @@
             bindings = <
     &kp Q       &kp W      &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O      &kp P   
     &mt LCTL A  &mt LGUI S &mt LALT D &mt LSFT F &kp G       &kp H     &mt LSFT J &mt LALT K &mt LGUI L &mt LCTL QUOT
-    &kp Z         &kp X    &kp C  &lt I3 V      &kp B       &kp N     &lt I3 M   &kp CMMA   &kp DOT    &kp SCLN
+    &kp Z         &kp X    &kp C  &l
+    t I3 V      &kp B       &kp N     &lt I3 M   &kp CMMA   &kp DOT    &kp SCLN
                            &kp TAB &lt NAV SPC &kp RET &lt NAV BKSP &sk LSFT  &kp DEL
             >;
         };
@@ -77,9 +76,9 @@
 
         nav_layer {
             bindings = <
-    &none &none &none &none &none &kp HOME &kp PGDN &kp PGUP &kp END &none
-    &kp LCTL &kp LGUI &kp LALT &kp LSFT &none &kp LARW &kp DARW &kp UARW &kp RARW &none
-    &none &none &none &none &none &none &none &none &none &none
+    &kp F1 &kp F2 &kp F3 &kp F4 &none &kp HOME &kp PGDN &kp PGUP &kp END &none
+    &mt LCTL F5 &mt LGUI F6 &mt LALT F7 &mt LSFT F8 &none &kp LARW &kp DARW &kp UARW &kp RARW &none
+    &kp F9 &kp F10 &kp F11 &kp F12 &none &none &none &none &none &none
                 &trans &trans &trans &trans &trans &trans
             >;
         };
