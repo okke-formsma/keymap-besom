@@ -69,8 +69,7 @@
             bindings = <
     &kp Q       &kp W      &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I      &kp O      &kp P   
     &mt LCTL A  &mt LGUI S &mt LALT D &mt LSFT F &kp G       &kp H     &mt LSFT J &mt LALT K &mt LGUI L &mt LCTL QUOT
-    &kp Z         &kp X    &kp C  &l
-    t I3 V      &kp B       &kp N     &lt I3 M   &kp CMMA   &kp DOT    &kp SCLN
+    &kp Z         &kp X    &kp C  &lt I3 V      &kp B       &kp N     &lt I3 M   &kp CMMA   &kp DOT    &kp SCLN
                            &kp TAB &lt NAV SPC &kp RET &lt NAV BKSP &sk LSFT  &kp DEL
             >;
         };
